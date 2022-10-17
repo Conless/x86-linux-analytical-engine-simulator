@@ -11,13 +11,11 @@
 
 // Constants, global variables and definitions
 
-
 #ifdef _WIN32
 #define CONSOLE "CON"
 #elif __linux__
 #define CONSOLE "/dev/tty"
 #endif
-
 
 using std::cin;
 using std::cout;
@@ -53,7 +51,8 @@ void CheckInput(int argc, char **argv) {
             printf("选项:\n");
             printf("\t-h, --help\t\t输出帮助界面\n");
             printf("\t-v, --version\t\t输出版本信息与声明\n");
-            printf("\t-o\t\t\t将程序输出到指定文件, 若此项留空, 输出结果将会呈现在命令行\n");
+            printf("\t-o\t\t\t将程序输出到指定文件, 若此项留空, "
+                   "输出结果将会呈现在命令行\n");
             printf("\t-l\t\t\t将程序运行日志输出到指定文件, 若此项留空, "
                    "将不会输出日志\n\n");
             exit(0);
@@ -134,7 +133,8 @@ void OutputResult() {
     // fclose(stdout);
     if (strcmp(outputfilename, ""))
         freopen(outputfilename, "w", stdout);
-    else freopen(CONSOLE, "w", stdout);
+    else
+        freopen(CONSOLE, "w", stdout);
     for (int num : result)
         printf("%d\n", num);
     fclose(stdout);
