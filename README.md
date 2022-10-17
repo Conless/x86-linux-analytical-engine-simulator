@@ -31,5 +31,5 @@
 例如
 ```
 ./simulate test.txt -o a.txt -l b.txt
-``
+```
 就是编译模拟 test.txt, 输出结果至 a.txt, 输出日志至 b.txt.
