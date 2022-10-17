@@ -27,3 +27,9 @@
 ```
 
 其中, source_file 是分析机源文件, output_file 是输出文件, log_file 是日志文件. output_file 中存放模拟源程序得到的结果, log_file 中存放每一步的各个数据.
+
+例如
+```
+./simulate test.txt -o a.txt -l b.txt
+``
+就是编译模拟 test.txt, 输出结果至 a.txt, 输出日志至 b.txt.
