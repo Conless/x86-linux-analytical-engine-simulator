@@ -4,7 +4,7 @@
 // File name:
 // /course/22fall/sjtu/cs1950/week_2/x86-linux-analytical-engine-simulator/main.cpp
 
-// Headerss
+// Headers
 #include <bits/stdc++.h>
 #include <cstdio>
 #include <cstring>
