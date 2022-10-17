@@ -11,7 +11,14 @@
 
 // Constants, global variables and definitions
 
-// Templates and namespaces
+
+#ifdef _WIN32
+#define CONSOLE "CON"
+#elif __linux__
+#define CONSOLE "/dev/tty"
+#endif
+
+
 using std::cin;
 using std::cout;
 using std::endl;
@@ -46,7 +53,7 @@ void CheckInput(int argc, char **argv) {
             printf("选项:\n");
             printf("\t-h, --help\t\t输出帮助界面\n");
             printf("\t-v, --version\t\t输出版本信息与声明\n");
-            printf("\t-o\t\t\t将程序输出到指定文件\n");
+            printf("\t-o\t\t\t将程序输出到指定文件, 若此项留空, 输出结果将会呈现在命令行\n");
             printf("\t-l\t\t\t将程序运行日志输出到指定文件, 若此项留空, "
                    "将不会输出日志\n\n");
             exit(0);
@@ -72,7 +79,7 @@ void CheckInput(int argc, char **argv) {
 }
 
 void CompileError(int pos, int type, char oper = 0) {
-    freopen("/dev/tty", "w", stdout);
+    freopen(CONSOLE, "w", stdout);
     printf("%s:%d: 编译错误: ", filename, pos);
     if (type == 1)
         printf("对函数 N 进行了不当操作.");
@@ -110,7 +117,7 @@ void OutputLog(int line) {
 }
 
 void OperationError(int pos, int type) {
-    freopen("/dev/tty", "w", stdout);
+    freopen(CONSOLE, "w", stdout);
     printf("%s:%d: 操作错误: ", filename, pos);
     if (type == 1)
         printf("输入的操作数过多.");
@@ -127,7 +134,7 @@ void OutputResult() {
     // fclose(stdout);
     if (strcmp(outputfilename, ""))
         freopen(outputfilename, "w", stdout);
-    else freopen("/dev/tty", "w", stdout);
+    else freopen(CONSOLE, "w", stdout);
     for (int num : result)
         printf("%d\n", num);
     fclose(stdout);
