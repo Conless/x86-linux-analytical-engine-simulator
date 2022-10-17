@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22)
+project(x86-linux-analytical-engine-simulator)
+include_directories(../../x86-linux-analytical-engine-simulator/include)
+set(CMAKE_BUILD_TYPE DEBUG)
+set(SOURCE_LIST src/main.cpp)
+add_executable(simulate ${SOURCE_LIST})
