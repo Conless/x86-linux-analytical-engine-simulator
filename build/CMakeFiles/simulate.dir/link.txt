@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/simulate.dir/main.cpp.o  -o simulate 
+/usr/bin/c++ -g CMakeFiles/simulate.dir/src/main.cpp.o CMakeFiles/simulate.dir/include/compiler.cc.o CMakeFiles/simulate.dir/include/operator.cc.o -o simulate 

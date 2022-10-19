@@ -75,20 +75,13 @@ void CompileError(int pos, int type, char oper) {
     exit(-1);
 }
 
-bool CheckValidInput(std::string strinput) {
-    if (strinput[0] != 'N' && strinput[0] != '+' &&
-        strinput[0] != '-' && strinput[0] != '*' &&
-        strinput[0] != '/' && strinput[0] != 'L' &&
-        strinput[0] != 'S' && strinput[0] != 'P' &&
-        strinput[0] != 'B' && strinput[0] != 'F' &&
-        strinput[0] != '?') {
-        for (int i = 0; i < strinput.size(); i++) {
-            if (strinput[0] == '#')
-                return 0;
-            if (strinput[0] != ' ')
-                CompileError(operation_cnt, 10);
-        }
-    }
+bool CheckValidInput() {
+    std::string strinput = s[operation_cnt];
+    if (strinput[0] != 'N' && strinput[0] != '+' && strinput[0] != '-' &&
+        strinput[0] != '*' && strinput[0] != '/' && strinput[0] != 'L' &&
+        strinput[0] != 'S' && strinput[0] != 'P' && strinput[0] != 'B' &&
+        strinput[0] != 'F' && strinput[0] != '?')
+        return 0;
     return 1;
 }
 

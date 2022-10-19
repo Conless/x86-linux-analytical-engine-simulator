@@ -22,5 +22,5 @@ extern std::string s[1005];
 
 extern void CheckInput(int, char **);
 extern void CompileError(int, int, char = 0);
-extern bool CheckValidInput(std::string);
+extern bool CheckValidInput();
 extern void OperationError(int, int);
