@@ -1,3 +1,0 @@
-/mnt/d/OneDrive/cs/course/22fall/sjtu/cs1950/week_2/x86-linux-analytical-engine-simulator/build/CMakeFiles/simulate.dir
-/mnt/d/OneDrive/cs/course/22fall/sjtu/cs1950/week_2/x86-linux-analytical-engine-simulator/build/CMakeFiles/edit_cache.dir
-/mnt/d/OneDrive/cs/course/22fall/sjtu/cs1950/week_2/x86-linux-analytical-engine-simulator/build/CMakeFiles/rebuild_cache.dir
